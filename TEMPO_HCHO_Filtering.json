@@ -1,51 +1,55 @@
 {
-  "HCHO": {
-    "filters": {
-      "pixel_filter": [
-        {
-          "target_var": "product/vertical_column",
-          "criteria_var": "product/main_data_quality_flag",
-          "operator": "greater-than",
-          "threshold": "1",
-          "target_value": "nan",
-          "level": "all"
-        },
-        {
-          "target_var": "product/vertical_column",
-          "criteria_var": "support_data/eff_cloud_fraction",
-          "operator": "greater-than",
-          "threshold": "0.5",
-          "target_value": "nan",
-          "level": "all"
-        },
-        {
-          "target_var": "product/vertical_column",
-          "criteria_var": "geolocation/solar_zenith_angle",
-          "operator": "greater-than",
-          "threshold": "80",
-          "target_value": "nan",
-          "level": "all"
-        },
-        {
-          "target_var": "product/vertical_column",
-          "criteria_var": "product/vertical_column",
-          "operator": "less-than",
-          "threshold": "0",
-          "target_value": "0",
-          "level": "all"
-        },
-        {
-          "target_var": "product/vertical_column",
-          "criteria_var": "product/vertical_column",
-          "operator": "greater-than",
-          "threshold": "3e16",
-          "target_value": "3e16",
-          "level": "all"
-        }
-      ],
-      "variable_exclusion": {
-        "excluded_variables": []
+  "metadata": {
+    "mission": "TEMPO",
+    "product": "HCHO",
+    "config_type": "filtering",
+    "schema_version": "1.0"
+  },
+  "filters": {
+    "pixel_filter": [
+      {
+        "target_var": "product/vertical_column",
+        "criteria_var": "product/main_data_quality_flag",
+        "operator": "greater-than",
+        "threshold": "1",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "product/vertical_column",
+        "criteria_var": "support_data/eff_cloud_fraction",
+        "operator": "greater-than",
+        "threshold": "0.5",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "product/vertical_column",
+        "criteria_var": "geolocation/solar_zenith_angle",
+        "operator": "greater-than",
+        "threshold": "80",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "product/vertical_column",
+        "criteria_var": "product/vertical_column",
+        "operator": "less-than",
+        "threshold": "0",
+        "target_value": "0",
+        "level": "all"
+      },
+      {
+        "target_var": "product/vertical_column",
+        "criteria_var": "product/vertical_column",
+        "operator": "greater-than",
+        "threshold": "3e16",
+        "target_value": "3e16",
+        "level": "all"
       }
+    ],
+    "variable_exclusion": {
+      "excluded_variables": []
     }
   }
 }

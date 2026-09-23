@@ -1,112 +1,116 @@
 {
-  "O3TOT": {
-    "filters": {
-      "pixel_filter": [
-        {
-          "target_var": "product/column_amount_o3",
-          "criteria_var": "geolocation/solar_zenith_angle",
-          "operator": "greater-than",
-          "threshold": "80",
-          "target_value": "nan",
-          "level": "all"
-        },
-        {
-          "target_var": "product/column_amount_o3",
-          "criteria_var": "geolocation/viewing_zenith_angle",
-          "operator": "greater-than",
-          "threshold": "80",
-          "target_value": "nan",
-          "level": "all"
-        },
-        {
-          "target_var": "product/column_amount_o3",
-          "criteria_var": "product/quality_flag",
-          "operator": "in",
-          "threshold": [
-            0,
-            1,
-            2,
-            5
-          ],
-          "target_value": "nan",
-          "level": "2"
-        },
-        {
-          "target_var": "product/column_amount_o3",
-          "criteria_var": "product/column_amount_o3",
-          "operator": "less-than",
-          "threshold": "100",
-          "target_value": "100",
-          "level": "all"
-        },
-        {
-          "target_var": "product/column_amount_o3",
-          "criteria_var": "product/column_amount_o3",
-          "operator": "greater-than",
-          "threshold": "500",
-          "target_value": "500",
-          "level": "all"
-        },
-        {
-          "target_var": "product/fc",
-          "criteria_var": "geolocation/solar_zenith_angle",
-          "operator": "greater-than",
-          "threshold": "80",
-          "target_value": "nan",
-          "level": "all"
-        },
-        {
-          "target_var": "product/fc",
-          "criteria_var": "product/fc",
-          "operator": "less-than",
-          "threshold": "0",
-          "target_value": "0",
-          "level": "all"
-        },
-        {
-          "target_var": "product/fc",
-          "criteria_var": "product/fc",
-          "operator": "greater-than",
-          "threshold": "1",
-          "target_value": "1",
-          "level": "all"
-        },
-        {
-          "target_var": "product/uv_aerosol_index",
-          "criteria_var": "geolocation/solar_zenith_angle",
-          "operator": "greater-than",
-          "threshold": "80",
-          "target_value": "nan",
-          "level": "all"
-        },
-        {
-          "target_var": "product/uv_aerosol_index",
-          "criteria_var": "geolocation/viewing_zenith_angle",
-          "operator": "greater-than",
-          "threshold": "80",
-          "target_value": "nan",
-          "level": "all"
-        },
-        {
-          "target_var": "product/uv_aerosol_index",
-          "criteria_var": "product/uv_aerosol_index",
-          "operator": "less-than",
-          "threshold": "0",
-          "target_value": "nan",
-          "level": "all"
-        },
-        {
-          "target_var": "product/uv_aerosol_index",
-          "criteria_var": "product/uv_aerosol_index",
-          "operator": "greater-than",
-          "threshold": "5",
-          "target_value": "5",
-          "level": "all"
-        }
-      ],
-      "variable_exclusion": {
-        "excluded_variables": []
+  "metadata": {
+    "mission": "TEMPO",
+    "product": "O3TOT",
+    "config_type": "filtering",
+    "schema_version": "1.0"
+  },
+  "filters": {
+    "pixel_filter": [
+      {
+        "target_var": "product/column_amount_o3",
+        "criteria_var": "geolocation/solar_zenith_angle",
+        "operator": "greater-than",
+        "threshold": "80",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "product/column_amount_o3",
+        "criteria_var": "geolocation/viewing_zenith_angle",
+        "operator": "greater-than",
+        "threshold": "80",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "product/column_amount_o3",
+        "criteria_var": "product/quality_flag",
+        "operator": "in",
+        "threshold": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "target_value": "nan",
+        "level": "2"
+      },
+      {
+        "target_var": "product/column_amount_o3",
+        "criteria_var": "product/column_amount_o3",
+        "operator": "less-than",
+        "threshold": "100",
+        "target_value": "100",
+        "level": "all"
+      },
+      {
+        "target_var": "product/column_amount_o3",
+        "criteria_var": "product/column_amount_o3",
+        "operator": "greater-than",
+        "threshold": "500",
+        "target_value": "500",
+        "level": "all"
+      },
+      {
+        "target_var": "product/fc",
+        "criteria_var": "geolocation/solar_zenith_angle",
+        "operator": "greater-than",
+        "threshold": "80",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "product/fc",
+        "criteria_var": "product/fc",
+        "operator": "less-than",
+        "threshold": "0",
+        "target_value": "0",
+        "level": "all"
+      },
+      {
+        "target_var": "product/fc",
+        "criteria_var": "product/fc",
+        "operator": "greater-than",
+        "threshold": "1",
+        "target_value": "1",
+        "level": "all"
+      },
+      {
+        "target_var": "product/uv_aerosol_index",
+        "criteria_var": "geolocation/solar_zenith_angle",
+        "operator": "greater-than",
+        "threshold": "80",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "product/uv_aerosol_index",
+        "criteria_var": "geolocation/viewing_zenith_angle",
+        "operator": "greater-than",
+        "threshold": "80",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "product/uv_aerosol_index",
+        "criteria_var": "product/uv_aerosol_index",
+        "operator": "less-than",
+        "threshold": "0",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "product/uv_aerosol_index",
+        "criteria_var": "product/uv_aerosol_index",
+        "operator": "greater-than",
+        "threshold": "5",
+        "target_value": "5",
+        "level": "all"
       }
+    ],
+    "variable_exclusion": {
+      "excluded_variables": []
     }
   }
 }
