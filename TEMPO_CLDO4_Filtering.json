@@ -1,0 +1,59 @@
+{
+  "CLDO4": {
+    "filters": {
+      "pixel_filter": [
+        {
+          "target_var": "product/cloud_fraction",
+          "criteria_var": "geolocation/solar_zenith_angle",
+          "operator": "greater-than",
+          "threshold": "80",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/cloud_fraction",
+          "criteria_var": "product/cloud_fraction",
+          "operator": "less-than",
+          "threshold": "0",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/cloud_fraction",
+          "criteria_var": "product/cloud_fraction",
+          "operator": "greater-than",
+          "threshold": "1",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/cloud_pressure",
+          "criteria_var": "geolocation/solar_zenith_angle",
+          "operator": "greater-than",
+          "threshold": "80",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/cloud_pressure",
+          "criteria_var": "product/cloud_pressure",
+          "operator": "less-than",
+          "threshold": "0",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/cloud_pressure",
+          "criteria_var": "product/cloud_pressure",
+          "operator": "greater-than",
+          "threshold": "1100",
+          "target_value": "nan",
+          "level": "all"
+        }
+      ],
+      "variable_exclusion": {
+        "excluded_variables": []
+      }
+    }
+  }
+}

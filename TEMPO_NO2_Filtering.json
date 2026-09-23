@@ -1,0 +1,83 @@
+{
+  "NO2": {
+    "filters": {
+      "pixel_filter": [
+        {
+          "target_var": "product/vertical_column_stratosphere",
+          "criteria_var": "product/main_data_quality_flag",
+          "operator": "greater-than",
+          "threshold": "1",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/vertical_column_stratosphere",
+          "criteria_var": "geolocation/solar_zenith_angle",
+          "operator": "greater-than",
+          "threshold": "80",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/vertical_column_stratosphere",
+          "criteria_var": "product/vertical_column_stratosphere",
+          "operator": "less-than",
+          "threshold": "0.5e15",
+          "target_value": "0.5e15",
+          "level": "all"
+        },
+        {
+          "target_var": "product/vertical_column_stratosphere",
+          "criteria_var": "product/vertical_column_stratosphere",
+          "operator": "greater-than",
+          "threshold": "5e15",
+          "target_value": "5e15",
+          "level": "all"
+        },
+        {
+          "target_var": "product/vertical_column_troposphere",
+          "criteria_var": "product/main_data_quality_flag",
+          "operator": "greater-than",
+          "threshold": "1",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/vertical_column_troposphere",
+          "criteria_var": "support_data/eff_cloud_fraction",
+          "operator": "greater-than",
+          "threshold": "0.5",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/vertical_column_troposphere",
+          "criteria_var": "geolocation/solar_zenith_angle",
+          "operator": "greater-than",
+          "threshold": "80",
+          "target_value": "nan",
+          "level": "all"
+        },
+        {
+          "target_var": "product/vertical_column_troposphere",
+          "criteria_var": "product/vertical_column_troposphere",
+          "operator": "less-than",
+          "threshold": "0",
+          "target_value": "0",
+          "level": "all"
+        },
+        {
+          "target_var": "product/vertical_column_troposphere",
+          "criteria_var": "product/vertical_column_troposphere",
+          "operator": "greater-than",
+          "threshold": "3e16",
+          "target_value": "3e16",
+          "level": "all"
+        }
+      ],
+      "variable_exclusion": {
+        "excluded_variables": []
+      }
+    }
+  }
+}
