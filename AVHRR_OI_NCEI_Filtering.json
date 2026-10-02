@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "mission": "AVHRR",
+    "product": "AVHRR_OI_NCEI",
+    "config_type": "filtering",
+    "schema_version": "1.0"
+  },
+  "filters": {
+    "pixel_filter": [
+      {
+        "target_var": "analysed_sst",
+        "criteria_var": "mask",
+        "operator": "equal-to",
+        "threshold": "2",
+        "target_value": "nan",
+        "level": "all"
+      },
+      {
+        "target_var": "analysed_sst",
+        "criteria_var": "sea_ice_fraction",
+        "operator": "greater-than",
+        "threshold": "0",
+        "target_value": "nan",
+        "level": "all"
+      }
+    ],
+    "variable_exclusion": {
+      "excluded_variables": [
+        "analysis_error",
+        "mask",
+        "sea_ice_fraction"
+      ]
+    }
+  }
+}

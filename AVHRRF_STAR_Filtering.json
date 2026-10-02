@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "mission": "AVHRRF",
+    "product": "AVHRRF_STAR",
+    "config_type": "filtering",
+    "schema_version": "1.0"
+  },
+  "filters": {
+    "pixel_filter": [
+      {
+        "target_var": "sea_surface_temperature",
+        "criteria_var": "quality_level",
+        "operator": "not-equal-to",
+        "threshold": "5",
+        "target_value": "nan",
+        "level": "all"
+      }
+    ],
+    "variable_exclusion": {
+      "excluded_variables": [
+        "dt_analysis",
+        "l2p_flags",
+        "quality_level",
+        "satellite_zenith_angle",
+        "sses_bias",
+        "sses_standard_deviation",
+        "sst_dtime",
+        "sst_front_position",
+        "sst_gradient_magnitude",
+        "wind_speed"
+      ]
+    }
+  }
+}
