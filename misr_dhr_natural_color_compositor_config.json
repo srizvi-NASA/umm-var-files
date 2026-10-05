@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "name": "MISR DHR Natural Color",
+  "input": {
+    "variable": "/Land_Parameter_Average/DHR",
+    "band_dimension": "Band"
+  },
+  "channels": {
+    "red": {
+      "select": {
+        "dimension": "Band",
+        "value": "red_672nm"
+      }
+    },
+    "green": {
+      "select": {
+        "dimension": "Band",
+        "value": "green_558nm"
+      }
+    },
+    "blue": {
+      "select": {
+        "dimension": "Band",
+        "value": "blue_446nm"
+      }
+    }
+  },
+  "processing": {
+    "clip": {
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "nodata": {
+    "source_value": -9999.0
+  },
+  "output": {
+    "channel_order": [
+      "red",
+      "green",
+      "blue"
+    ]
+  }
+}
