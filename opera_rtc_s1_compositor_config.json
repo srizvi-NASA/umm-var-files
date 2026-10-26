@@ -1,4 +1,3 @@
-```json
 {
   "name": "OPERA RTC-S1 Dual-Polarization RGB",
   "description": "Configuration for generating an RGB browse composite from dual-polarization OPERA RTC-S1 VV and VH assets.",
@@ -57,4 +56,3 @@
     "nodata": 0
   }
 }
-```
