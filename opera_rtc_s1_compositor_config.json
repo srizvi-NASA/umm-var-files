@@ -1,0 +1,60 @@
+```json
+{
+  "name": "OPERA RTC-S1 Dual-Polarization RGB",
+  "description": "Configuration for generating an RGB browse composite from dual-polarization OPERA RTC-S1 VV and VH assets.",
+
+  "inputs": {
+    "co_pol": {
+      "polarization": "VV",
+      "asset_suffix": "_VV.tif"
+    },
+    "cross_pol": {
+      "polarization": "VH",
+      "asset_suffix": "_VH.tif"
+    }
+  },
+
+  "processing": {
+    "minimum_db": -48.0,
+    "cross_pol_threshold_db": -24.0
+  },
+
+  "channels": {
+    "red": {
+      "expression": "254 * valid * (2 * red_mask * sqrt(max(co_pol - 3 * cross_pol, 0)) + z) + 1"
+    },
+    "green": {
+      "expression": "254 * valid * (3 * red_mask * sqrt(cross_pol) + 2 * z) + 1"
+    },
+    "blue": {
+      "expression": "254 * valid * (2 * sqrt(max(-(co_pol - 3 * cross_pol), 0)) + 5 * z) + 1"
+    }
+  },
+
+  "derived": {
+    "surface_scattering": "co_pol - 3 * cross_pol",
+    "difference": "max(co_pol - cross_pol, 0)",
+    "z": "(2 / pi) * blue_mask * atan(sqrt(difference))"
+  },
+
+  "masks": {
+    "blue_mask": "cross_pol < db_to_power(-24.0)",
+    "red_mask": "cross_pol >= db_to_power(-24.0)",
+    "valid": "cross_pol > 0"
+  },
+
+  "output": {
+    "bands": [
+      "red",
+      "green",
+      "blue"
+    ],
+    "dtype": "uint8",
+    "range": [
+      0,
+      255
+    ],
+    "nodata": 0
+  }
+}
+```
